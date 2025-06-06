@@ -1,1 +1,136 @@
-JMS_Smart_Farm
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이준호의 포트폴리오</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="../index.html" style="color:inherit; text-decoration:none; cursor:pointer;">
+        이준호의 포트폴리오
+      </a>
+    </h1>
+    <p>스마트팜 주요 기능 소개</p>
+  </header>
+  <main>
+    <div class="project-section">
+      <h2>프로젝트 개요</h2>
+      <p>
+        <strong>JMS Smart Farm</strong>은 Arduino와 Python을 활용하여 스마트팜 시스템을 구축한 프로젝트입니다.<br>
+        이 시스템은 온도, 습도, 조도 센서를 통해 환경 데이터를 수집하고, 이를 기반으로 자동으로 <br>
+        물주기 및 조명 제어를 수행합니다.<br>
+        또한, 웹 인터페이스를 통해 실시간 모니터링과 제어가 가능합니다.
+      </p>
+      <p>
+        <a href="https://github.com/TreeNut-KR/JMS_smart_farm" target="_blank" style="display:inline-block; padding:8px 20px; background:#2d72d9; color:#fff; border-radius:6px; font-size:1rem; font-weight:600; text-decoration:none; box-shadow:0 2px 8px rgba(45,114,217,0.08); transition:background 0.2s;">
+          GitHub 저장소 바로가기
+        </a>
+      </p>
+    </div>
+    <div class="project-section" style="text-align:center; padding-top:24px; padding-bottom:24px;">
+        <h2 style="text-align:left;">시연 영상</h2>
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#000;">
+            <iframe 
+            src="https://www.youtube.com/embed/sc-wTiEF_mE?start=41045"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="project-section" style="padding-top:18px; padding-bottom:18px;">
+      <h2>👊 사용 기술</h2>
+      <div class="stack-list">
+        <div class="stack-item">
+          <div class="stack-name">🌱 Arduino</div>
+          <div class="stack-desc">Arduino 센서를 통해 온도, 습도를 측정하여 전달, 제어하는데 사용</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">🐍 python</div>
+          <div class="stack-desc">Arduino에서 전달한 데이터를 DB, 프론트엔드에 전달하는데 사용</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">🐬 MySQL</div>
+          <div class="stack-desc">온도, 습도, LED, 팬, 펌프 등의 데이터를 저장하는데 사용</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">🐳 Docker</div>
+          <div class="stack-desc">컨테이너 기반의 배포 및 환경 관리에 사용</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">☁️ Google Cloud Platform</div>
+          <div class="stack-desc">Google Drive를 통한 유튜브 라이브 자동 생성에 사용</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+    <h2>프로젝트 구성원</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>구성원</th>
+                <th>업무</th>
+                <th>사용 기술</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://github.com/qwer9679">이준호 (qwer9679)</a></td>
+                <td>백엔드</td>
+                <td>H/W, Python, MySQL, Google Cloud Platform</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/CutTheWire">서정훈 (CutTheWire)</a></td>
+                <td>백엔드</td>
+                <td>H/W, Python, MySQL, Google Cloud Platform</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/zbezdac1f">오동현 (zbezdac1f)</a></td>
+                <td>백엔드</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/Hsm2306">홍석민 (Hsm2306)</a></td>
+                <td>백엔드</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jgkim14">김준건 (jgkim14)</a></td>
+                <td>백엔드</td>
+                <td>Python, Docker</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="project-section" style="text-align:center; padding-top:28px; padding-bottom:24px;">
+      <h2 style="text-align:left; margin-left:0;">H/W 전력 배선도</h2>
+      <img src="../image/Smart_Farm/HW_전력배선도.jpg" alt="스마트팜  전력배선도" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <h2 style="text-align:left; margin-left:0;">H/W 전력 배선</h2>
+      <img src="../image/Smart_Farm/HW_전력배선_사진.jpg" alt="스마트팜 전력배선" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <h2 style="text-align:left; margin-left:0;">스마트팜 성장 시작(2024.05.05)</h2>
+      <img src="../image/Smart_Farm/스마트팜 완성(0505).jpg" alt="스마트팜 전력배선" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <h2 style="text-align:left; margin-left:0;">스마트팜 성장 완료(2024.06.06)</h2>
+      <img src="../image/Smart_Farm/스마트팜 완성(0606).jpg" alt="스마트팜 전력배선" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      
+    </div>
+
+    <div class="project-section back">
+      <a href="../index.html">← 돌아가기</a>
+    </div>
+  </main>
+
+<footer>
+  © 2025 이준호. All rights reserved.
+</footer>
+
+</body></html>

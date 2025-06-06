@@ -1,5 +1,4 @@
-
-    * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -53,7 +52,8 @@
       padding: 0 24px;
     }
 
-    .project {
+    /* 기존 .project-section → .project로 통일 */
+    .project, .project-section {
       background: #fff;
       padding: 28px 28px 20px 28px;
       border-radius: 14px;
@@ -63,38 +63,60 @@
       transition: box-shadow 0.2s, transform 0.2s;
     }
 
-    .project:hover {
+    .project:hover, .project-section:hover {
       box-shadow: 0 6px 24px rgba(0,0,0,0.10);
       transform: translateY(-3px) scale(1.01);
     }
 
-    .project h2 {
+    .project h2, .project-section h2 {
       color: #22223b;
       font-size: 1.6rem;
       margin-bottom: 8px;
       font-weight: 600;
       letter-spacing: -0.5px;
+      margin-top: 24px;
     }
 
-    .project p {
+    .project p, .project-section p, .project-section li, .project-section td {
       margin-bottom: 10px;
       color: #444;
       font-size: 1.05rem;
     }
 
-    .project strong {
+    .project strong, .project-section strong {
       color: #2d72d9;
       font-weight: 600;
     }
 
-    footer {
-      text-align: center;
-      padding: 28px 0 16px 0;
-      color: #b0b0b0;
-      font-size: 1rem;
-      background: #f7f7fa;
-      border-top: 1px solid #ececec;
-      margin-top: 48px;
+    ul, ol { padding-left: 22px; margin-bottom: 12px; }
+    img {
+      max-width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fafbfc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #ececec;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f4f8;
+      color: #22223b;
+      font-weight: 600;
+    }
+
+    .back {
+      margin-top: 30px;
+      text-align: left;
     }
 
     .stack-list {
@@ -129,6 +151,18 @@
     .stack-desc {
       color: #444;
       font-size: 0.98rem;
+    }
+
+    /* 반응형 스타일 */
+    @media (max-width: 800px) {
+      .project-list {
+        flex-direction: column;
+        gap: 0;
+      }
+      .project-list .project, .project-list .project-section {
+        max-width: 100%;
+        margin-bottom: 24px;
+      }
     }
     @media (max-width: 700px) {
       .stack-list {
@@ -166,25 +200,34 @@
       .project.intro-flex p {
         text-align: left;
       }
+      .project-stack-list {
+        align-items: center !important;
+        justify-content: center !important;
+        display: flex !important;
+      }
+      .project-stack-list .stack-item {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 400px !important;
+      }
     }
-
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
-      .project h2 {
+      .project h2, .project-section h2 {
         font-size: 1.2rem;
       }
       main {
         padding: 0 8px;
       }
-      .project {
+      .project, .project-section {
         padding: 18px 10px 14px 10px;
       }
-      .project ul {
+      .project ul, .project-section ul {
         padding-left: 10px !important;
       }
-      .project ul li {
+      .project ul li, .project-section ul li {
         display: flex;
         align-items: flex-start;
         gap: 6px;
@@ -194,25 +237,15 @@
         word-break: keep-all;
         white-space: normal;
       }
-      .project ul li strong {
+      .project ul li strong, .project-section ul li strong {
         min-width: 70px;
         color: #2d72d9;
         flex-shrink: 0;
       }
-      .project ul a {
+      .project ul a, .project-section ul a {
         word-break: break-all;
       }
-    }
-
-    @media (max-width: 800px) {
-      .project-list {
-        flex-direction: column;
-        gap: 0;
-      }
-      .project-list .project {
-        max-width: 100%;
-        margin-bottom: 24px;
-      }
+      table, th, td { font-size: 0.95rem; }
     }
     @media (min-width: 701px) {
       .project.intro-flex {
@@ -230,16 +263,12 @@
         display: block !important;
       }
     }
-    @media (max-width: 700px) {
-      .project-stack-list {
-        align-items: center !important;
-        justify-content: center !important;
-        display: flex !important;
-      }
-      .project-stack-list .stack-item {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        max-width: 400px !important;
-      }
+    footer {
+      text-align: center;
+      padding: 28px 0 16px 0;
+      color: #b0b0b0;
+      font-size: 1rem;
+      background: #f7f7fa;
+      border-top: 1px solid #ececec;
+      margin-top: 48px;
     }
-  
