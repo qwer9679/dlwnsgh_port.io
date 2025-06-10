@@ -35,8 +35,14 @@
             <ul style="margin:0; padding-left:20px; color:#444; font-size:1.05rem;">
                 <li><strong>2018.02</strong> - 인천선인고등학교 졸업</li>
                 <li><strong>2019.03</strong> - 청운대학교 컴퓨터공학과 입학</li>
-                <li><strong>2023.06</strong> - 네트워크 관리사 2급 자격증 취득</li>
-                <li><strong>2024.12</strong> - 정보처리기사 자격증 취득</li>
+                <li><strong>2023.06</strong> - 
+                    <a href="#" id="network-link" style="color:#2d72d9; text-decoration:underline; cursor:pointer;">
+                        네트워크 관리사 2급 자격증 취득
+                    </a></li>
+                <li><strong>2024.12</strong> - 
+                    <a href="#" id="info-link" style="color:#2d72d9; text-decoration:underline; cursor:pointer;">
+                        정보처리기사 자격증 취득
+                    </a></li>
                 <li><strong>2025.02</strong> - 청운대학교 컴퓨터공학과 졸업 (평점 평균 3.42, 전공 3.56)</li>
             </ul>
         </div>
@@ -134,4 +140,63 @@
 <footer>
 © 2025 이준호. All rights reserved.
 </footer>
+
+<div id="network-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.18); padding:18px 18px 10px 18px; max-width:90vw; max-height:90vh; position:relative; display:flex; flex-direction:column; align-items:center;">
+        <button id="network-close" style="position:absolute; top:10px; right:14px; background:none; border:none; font-size:2rem; color:#888; cursor:pointer;">×</button>
+        <img src="./image/취득확인서/네트워크관리사2급취득확인서.png" alt="네트워크관리사2급취득확인서이미지" style="max-width:80vw; max-height:70vh; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <div style="margin-top:8px; color:#444; font-size:1rem;">팝업 밖을 클릭하거나 ESC를 누르면 닫힙니다.</div>
+    </div>
+</div>
+
+<div id="info-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.18); padding:18px 18px 10px 18px; max-width:90vw; max-height:90vh; position:relative; display:flex; flex-direction:column; align-items:center;">
+        <button id="info-close" style="position:absolute; top:10px; right:14px; background:none; border:none; font-size:2rem; color:#888; cursor:pointer;">×</button>
+        <img src="./image/취득확인서/정보처리기사취득확인서.png" alt="정보처리기사취득확인서이미지" style="max-width:80vw; max-height:70vh; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <div style="margin-top:8px; color:#444; font-size:1rem;">팝업 밖을 클릭하거나 ESC를 누르면 닫힙니다.</div>
+    </div>
+</div>
+
+<script>
+    // 네트워크관리사 모달
+    const networkLink = document.getElementById('network-link');
+    const networkModal = document.getElementById('network-modal');
+    const networkClose = document.getElementById('network-close');
+    networkLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        networkModal.style.display = 'flex';
+    });
+    networkClose.addEventListener('click', function() {
+        networkModal.style.display = 'none';
+    });
+    networkModal.addEventListener('click', function(e) {
+        if (e.target === networkModal) networkModal.style.display = 'none';
+    });
+    document.addEventListener('keydown', function(e) {
+        if (networkModal.style.display === 'flex' && e.key === 'Escape') {
+        networkModal.style.display = 'none';
+        }
+    });
+
+    // 정보처리기사 모달
+    const infoLink = document.getElementById('info-link');
+    const infoModal = document.getElementById('info-modal');
+    const infoClose = document.getElementById('info-close');
+    infoLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        infoModal.style.display = 'flex';
+    });
+    infoClose.addEventListener('click', function() {
+        infoModal.style.display = 'none';
+    });
+    infoModal.addEventListener('click', function(e) {
+        if (e.target === infoModal) infoModal.style.display = 'none';
+    });
+    document.addEventListener('keydown', function(e) {
+        if (infoModal.style.display === 'flex' && e.key === 'Escape') {
+        infoModal.style.display = 'none';
+        }
+    });
+</script>
+
 </body></html>
