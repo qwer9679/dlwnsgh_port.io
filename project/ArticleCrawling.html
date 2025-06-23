@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이준호의 포트폴리오</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="../index.html" style="color:inherit; text-decoration:none; cursor:pointer;">
+        이준호의 포트폴리오
+      </a>
+    </h1>
+    <p>기사 크롤링</p>
+  </header>
+  <main>
+    <div class="project-section">
+      <h2>프로젝트 개요</h2>
+      <p>
+        <strong>Article Crawling</strong>은 경기도교육청, 서울교육청, 인천교육청에 올라오는 기사를 크롤링합니다.<br>
+        이 프로젝트는 Python의 trafilatura 라이브러리를 사용하여 웹 페이지에서 데이터를 추출하고, <br>
+        추출된 데이터를 복사하는 프로젝트입니다.
+      </p>
+      <p>
+        <a href="https://github.com/qwer9679/ArticleCrawling" target="_blank" style="display:inline-block; padding:8px 20px; background:#2d72d9; color:#fff; border-radius:6px; font-size:1rem; font-weight:600; text-decoration:none; box-shadow:0 2px 8px rgba(45,114,217,0.08); transition:background 0.2s;">
+          GitHub 저장소 바로가기
+        </a>
+      </p>
+    </div>
+    <div class="project-section" style="text-align:center; padding-top:24px; padding-bottom:24px;">
+    <h2 style="text-align:left;">크롤링 화면</h2>
+    <img src="../image/ArticleCrawling/기사 크롤링 시연.gif" alt="기사 크롤링 시연" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+</div>
+
+    <div class="project-section" style="padding-top:18px; padding-bottom:18px;">
+      <h2>👊 사용 기술</h2>
+      <div class="stack-list">
+        <div class="stack-item">
+          <div class="stack-name">🐍 python</div>
+          <div class="stack-desc">GUI, 라이브러리를 통하여 Chrome 내에 열려있는 페이지 크롤링 구현</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+    <h2>프로젝트 구성원</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>구성원</th>
+                <th>업무</th>
+                <th>사용 기술</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://github.com/qwer9679">이준호 (qwer9679)</a></td>
+                <td>백엔드</td>
+                <td>Python</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="project-section">
+        <h2>문제점 및 요구사항 분석</h2>
+        <ul>
+            <li>서울, 경기, 인천교육청에 올라온 기사를 수동으로 재개시하고 있다.</li>
+            <li>서울, 경기, 인천교육청의 기사를 가져올 수 있어야 한다.</li>
+            <li>제목, 내용을 구분하여 가져올 수 있어야 한다.</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <h2>제공 솔루션</h2>
+        <ul>
+            <li>서울, 경기, 인천 페이지의 구조에 따라 기사를 크롤링</li>
+            <li>크롤링한 기사를 제목과 내용으로 구분하여 저장</li>
+            <li>크롤링한 기사를 GUI로 확인할 수 있도록 구현</li>
+            <li>크롤링한 기사를 복사할 수 있도록 구현</li>
+        </ul>
+    </div>
+
+    <div class="project-section" style="text-align:center; padding-top:28px; padding-bottom:24px;">
+      <h2 style="text-align:left; margin-left:0;">시스템 구성 다이어그램</h2>
+      <img src="../image/ArticleCrawling/기사 크롤링.drawio.png" alt="스마트팜  전력배선도" style="max-width:100%; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+    </div>
+
+    <div class="project-section back">
+      <a href="../index.html">← 돌아가기</a>
+    </div>
+  </main>
+
+<footer>
+  © 2025 이준호. All rights reserved.
+</footer>
+
+</body></html>
